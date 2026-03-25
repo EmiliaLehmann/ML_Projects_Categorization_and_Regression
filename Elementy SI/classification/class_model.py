@@ -53,8 +53,9 @@ print("Czy explicit jest jakkolwiek wartosciowa zmienna? Jak sie tu pojawi, to t
 y = df['track_genre']
 
 #parametry
-selected_features = ['danceability', 'energy', 'loudness', 'speechiness',
-                     'acousticness', 'instrumentalness', 'valence', 'explicit']
+selected_features = ['popularity', 'duration_ms', 'danceability', 'energy', 'key',
+    'loudness', 'mode', 'speechiness', 'acousticness', 'instrumentalness',
+    'liveness', 'valence', 'tempo', 'time_signature', 'explicit']
 X = df[selected_features]
 
 y = y_encoded
@@ -82,13 +83,20 @@ y_test_oh = np.eye(num_classes)[y_test]
 #brat ma na razie
 
 class DeepSpotifyNet:
-    def __init__(self, input_size, hidden_size, output_size, lr=0.01):
+    def __init__(self, input_size, hidden_size1,hidden_size2,hidden_size3, output_size, lr=0.01):
         self.lr = lr
         # Inicjalizacja wag He - ustawiamy wagi losowo oraz biasy tak, zeby neurony dzialaly nawet ze slabym sygnalem na wejsciu
-        self.W1 = np.random.randn(input_size, hidden_size) * np.sqrt(2./input_size)
-        self.b1 = np.zeros((1, hidden_size))
-        self.W2 = np.random.randn(hidden_size, output_size) * np.sqrt(2./hidden_size)
-        self.b2 = np.zeros((1, output_size))
+        self.W1 = np.random.randn(input_size, hidden_size1) * np.sqrt(2. / input_size)
+        self.b1 = np.zeros((1, hidden_size1))
+
+        self.W2 = np.random.randn(hidden_size1, hidden_size2) * np.sqrt(2. / hidden_size1)
+        self.b2 = np.zeros((1, hidden_size2))
+
+        self.W3 = np.random.randn(hidden_size2, hidden_size3) * np.sqrt(2. / hidden_size2)
+        self.b3 = np.zeros((1, hidden_size3))
+
+        self.W4 = np.random.randn(hidden_size3, output_size) * np.sqrt(2. / hidden_size3)
+        self.b4 = np.zeros((1, output_size))
         self.loss_history = []
 
     #tu jest nasz kochany rell - wartosci < 0 = 0 i te wyzej leca liniowo
@@ -105,6 +113,14 @@ class DeepSpotifyNet:
         self.z1 = np.dot(X, self.W1) + self.b1
         self.a1 = self._relu(self.z1)
         self.z2 = np.dot(self.a1, self.W2) + self.b2
+        self.a2 = self._relu(self.z2)
+
+        self.z3 = np.dot(self.a2, self.W3) + self.b3
+        self.a3 = self._relu(self.z3)
+
+        self.z4 = np.dot(self.a3, self.W4) + self.b4
+        self.probs = self._softmax(self.z4)
+
         self.probs = self._softmax(self.z2)
         return self.probs
 
@@ -127,7 +143,17 @@ class DeepSpotifyNet:
                 # Backward
                 # Sieć patrzy na swoje przewidywanie (probs) i porównuje je z prawdą (y_batch).
                 # dz2 = probs - y_batch: To jest nasz błąd. Mówi nam, o ile sieć się pomyliła.
-                dz2 = probs - y_batch
+
+                dz4 = probs - y_batch
+                dW4 = np.dot(self.a3.T, dz4) / batch_size
+                db4 = np.sum(dz4, axis=0, keepdims=True) / batch_size
+
+                dz3 = np.dot(dz4, self.W4.T) * (self.z3 > 0)
+                dW3 = np.dot(self.a2.T, dz3) / batch_size
+                db3 = np.sum(dz3, axis=0, keepdims=True) / batch_size
+
+                dz2 = np.dot(dz3, self.W3.T) * (self.z2 > 0)
+
                 dW2 = np.dot(self.a1.T, dz2) / batch_size
                 db2 = np.sum(dz2, axis=0, keepdims=True) / batch_size
 
@@ -147,6 +173,11 @@ class DeepSpotifyNet:
                 self.W2 -= self.lr * dW2
                 self.b2 -= self.lr * db2
 
+                self.W3 -= self.lr * dW3
+                self.b3 -= self.lr * db3
+                self.W4 -= self.lr * dW4
+                self.b4 -= self.lr * db4
+
             # Obliczanie straty na koniec epoki - jak bardzo brat sie pomylil
             full_probs = self.forward(X)
             #entropia krzyzowa
@@ -158,24 +189,37 @@ class DeepSpotifyNet:
 
 # odpalamy kolege oh god oh fuck
 
-# #  Inicjalizacja (8 wejść, 64 neurony ukryte, 114 gatunków)
-# input_dim = X_train_scaled.shape[1]
-# output_dim = num_classes
-# nn = DeepSpotifyNet(input_size=input_dim, hidden_size=64, output_size=output_dim, lr=0.1)
-#
-# # Trenowanie
-# print("\nRozpoczynam trenowanie sieci...")
-# nn.train(X_train_scaled, y_train_oh, epochs=100, batch_size=256)
-#
-# #  Wykres Loss - czy siec sie uczy?
-# plt.plot(nn.loss_history)
-# plt.title("Postęp uczenia się (Loss)")
-# plt.xlabel("Epoka")
-# plt.ylabel("Błąd (Cross-Entropy)")
-# plt.show()
-#
-# # skutecznosc modelu
-# test_probs = nn.forward(X_test_scaled)
-# predictions = np.argmax(test_probs, axis=1)
-# accuracy = np.mean(predictions == y_test)
-# print(f"\nSkuteczność na zbiorze testowym: {accuracy * 100:.2f}%")
+#  Inicjalizacja (8 wejść, 64 neurony ukryte, 114 gatunków)
+input_dim = X_train_scaled.shape[1]
+output_dim = num_classes
+nn = DeepSpotifyNet(input_size=input_dim, hidden_size1=512,hidden_size2=256, hidden_size3=128, output_size=output_dim, lr=0.05)
+
+# Trenowanie
+print("\nRozpoczynam trenowanie sieci...")
+nn.train(X_train_scaled, y_train_oh, epochs=200, batch_size=256)
+
+#  Wykres Loss - czy siec sie uczy?
+plt.plot(nn.loss_history)
+plt.title("Postęp uczenia się (Loss)")
+plt.xlabel("Epoka")
+plt.ylabel("Błąd (Cross-Entropy)")
+plt.show()
+
+# skutecznosc modelu
+test_probs = nn.forward(X_test_scaled)
+predictions = np.argmax(test_probs, axis=1)
+accuracy = np.mean(predictions == y_test)
+print(f"\nSkuteczność na zbiorze testowym: {accuracy * 100:.2f}%")
+
+# Zapisywanie wyniku do pliku tekstowego
+with open("wynik_modelu.txt", "a") as f:
+    f.write("\n" + "="*40 + "\n")
+    f.write("--- NOWY TEST MODELU ---\n")
+    f.write(f"Liczba epok: \n")
+    f.write(f"Learning Rate: \n")
+    f.write(f"Skutecznosc (Accuracy): {accuracy * 100:.2f}%\n")
+    f.write("Zmiany:\n")
+    f.write("----------------------------------------\n")
+
+
+print("\nWynik został dopisany do pliku wynik_modelu.txt")
