@@ -1,0 +1,64 @@
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 500
+Learning Rate: 0.05
+Skutecznosc (Accuracy): 17.79%
+Zmiany: dodanie jednej warstwy ukrytej.
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 500
+Learning Rate: 0.05
+Skutecznosc (Accuracy): 31.07%
+Zmiany: zmienienie 8 wejść/cech na 15.
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 1000
+Learning Rate: 0.01
+Skutecznosc (Accuracy): 32.36%
+Zmiany: zmienienie liczby epok i learning rate.
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 100
+Learning Rate: 0.05
+Skutecznosc (Accuracy): 31.29%
+Zmiany: dodanie jednej warstwy, zmniejszenie liczby epok i learnng rate
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 100
+Learning Rate: 0.05
+Skutecznosc (Accuracy): 30.21%
+Zmiany: zmnijeszenie batch size
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 100
+Learning Rate: 0.05
+Skutecznosc (Accuracy): 32.36%
+Zmiany: wielkość próby testowej (zmiana z 0.2 na 0.1)
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 200
+Learning Rate: 0.05
+Skutecznosc (Accuracy): 30.64%
+Zmiany: Zwiększenie liczby epok
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 200
+Learning Rate: 0.05
+Skutecznosc (Accuracy): 29.61%
+Zmiany: dwukrotne zwiększenie neuronów w pierwszej warstwie
+----------------------------------------
