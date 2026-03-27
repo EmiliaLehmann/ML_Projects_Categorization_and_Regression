@@ -1,0 +1,456 @@
+--- Sesja: 2026-03-26 15:01:51 ---
+Parametry: okno=6, ukryte=32, lr=0.001
+Wynik MAE: 3.7010 °C
+------------------------------
+--- Sesja: 2026-03-26 15:01:52 ---
+Parametry: okno=6, ukryte=32, lr=0.005
+Wynik MAE: 2.3936 °C
+------------------------------
+--- Sesja: 2026-03-26 15:01:53 ---
+Parametry: okno=6, ukryte=64, lr=0.001
+Wynik MAE: 2.3752 °C
+------------------------------
+--- Sesja: 2026-03-26 15:01:53 ---
+Parametry: okno=6, ukryte=64, lr=0.005
+Wynik MAE: 1.2770 °C
+------------------------------
+--- Sesja: 2026-03-26 15:01:54 ---
+Parametry: okno=12, ukryte=32, lr=0.001
+Wynik MAE: 3.4510 °C
+------------------------------
+--- Sesja: 2026-03-26 15:01:55 ---
+Parametry: okno=12, ukryte=32, lr=0.005
+Wynik MAE: 2.3856 °C
+------------------------------
+--- Sesja: 2026-03-26 15:01:56 ---
+Parametry: okno=12, ukryte=64, lr=0.001
+Wynik MAE: 2.8597 °C
+------------------------------
+--- Sesja: 2026-03-26 15:01:57 ---
+Parametry: okno=12, ukryte=64, lr=0.005
+Wynik MAE: 0.5880 °C
+------------------------------
+--- Sesja: 2026-03-26 15:01:58 ---
+Parametry: okno=24, ukryte=32, lr=0.001
+Wynik MAE: 3.5654 °C
+------------------------------
+--- Sesja: 2026-03-26 15:02:00 ---
+Parametry: okno=24, ukryte=32, lr=0.005
+Wynik MAE: 1.6446 °C
+------------------------------
+--- Sesja: 2026-03-26 15:02:01 ---
+Parametry: okno=24, ukryte=64, lr=0.001
+Wynik MAE: 1.4524 °C
+------------------------------
+--- Sesja: 2026-03-26 15:02:03 ---
+Parametry: okno=24, ukryte=64, lr=0.005
+Wynik MAE: 0.8286 °C
+------------------------------
+--- Sesja: 2026-03-27 10:19:02 ---
+Parametry: okno=6, ukryte=32, lr=0.001
+Wynik MAE: 3.5350 °C
+------------------------------
+--- Sesja: 2026-03-27 10:19:03 ---
+Parametry: okno=6, ukryte=32, lr=0.005
+Wynik MAE: 1.8317 °C
+------------------------------
+--- Sesja: 2026-03-27 10:19:04 ---
+Parametry: okno=6, ukryte=64, lr=0.001
+Wynik MAE: 2.6959 °C
+------------------------------
+--- Sesja: 2026-03-27 10:19:05 ---
+Parametry: okno=6, ukryte=64, lr=0.005
+Wynik MAE: 0.7761 °C
+------------------------------
+--- Sesja: 2026-03-27 10:19:06 ---
+Parametry: okno=12, ukryte=32, lr=0.001
+Wynik MAE: 3.5907 °C
+------------------------------
+--- Sesja: 2026-03-27 10:19:07 ---
+Parametry: okno=12, ukryte=32, lr=0.005
+Wynik MAE: 2.2746 °C
+------------------------------
+--- Sesja: 2026-03-27 10:19:08 ---
+Parametry: okno=12, ukryte=64, lr=0.001
+Wynik MAE: 1.9550 °C
+------------------------------
+--- Sesja: 2026-03-27 10:19:09 ---
+Parametry: okno=12, ukryte=64, lr=0.005
+Wynik MAE: 0.8997 °C
+------------------------------
+--- Sesja: 2026-03-27 10:19:10 ---
+Parametry: okno=24, ukryte=32, lr=0.001
+Wynik MAE: 3.2394 °C
+------------------------------
+--- Sesja: 2026-03-27 10:19:11 ---
+Parametry: okno=24, ukryte=32, lr=0.005
+Wynik MAE: 1.9374 °C
+------------------------------
+--- Sesja: 2026-03-27 10:19:13 ---
+Parametry: okno=24, ukryte=64, lr=0.001
+Wynik MAE: 1.3688 °C
+------------------------------
+--- Sesja: 2026-03-27 10:19:14 ---
+Parametry: okno=24, ukryte=64, lr=0.005
+Wynik MAE: 0.5664 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:05 ---
+Parametry: okno=6, ukryte=32, lr=0.001, tr=800
+Wynik MAE: 3.6705 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:05 ---
+Parametry: okno=6, ukryte=32, lr=0.001, tr=1200
+Wynik MAE: 3.3232 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:06 ---
+Parametry: okno=6, ukryte=32, lr=0.001, tr=1600
+Wynik MAE: 3.4786 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:07 ---
+Parametry: okno=6, ukryte=32, lr=0.005, tr=800
+Wynik MAE: 1.6580 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:07 ---
+Parametry: okno=6, ukryte=32, lr=0.005, tr=1200
+Wynik MAE: 2.2574 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:08 ---
+Parametry: okno=6, ukryte=32, lr=0.005, tr=1600
+Wynik MAE: 2.1399 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:09 ---
+Parametry: okno=6, ukryte=64, lr=0.001, tr=800
+Wynik MAE: 2.3621 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:09 ---
+Parametry: okno=6, ukryte=64, lr=0.001, tr=1200
+Wynik MAE: 2.4693 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:10 ---
+Parametry: okno=6, ukryte=64, lr=0.001, tr=1600
+Wynik MAE: 2.4676 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:10 ---
+Parametry: okno=6, ukryte=64, lr=0.005, tr=800
+Wynik MAE: 0.7234 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:11 ---
+Parametry: okno=6, ukryte=64, lr=0.005, tr=1200
+Wynik MAE: 0.8841 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:11 ---
+Parametry: okno=6, ukryte=64, lr=0.005, tr=1600
+Wynik MAE: 1.2791 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:12 ---
+Parametry: okno=12, ukryte=32, lr=0.001, tr=800
+Wynik MAE: 3.6857 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:13 ---
+Parametry: okno=12, ukryte=32, lr=0.001, tr=1200
+Wynik MAE: 3.3923 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:13 ---
+Parametry: okno=12, ukryte=32, lr=0.001, tr=1600
+Wynik MAE: 3.6717 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:14 ---
+Parametry: okno=12, ukryte=32, lr=0.005, tr=800
+Wynik MAE: 1.7132 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:15 ---
+Parametry: okno=12, ukryte=32, lr=0.005, tr=1200
+Wynik MAE: 2.2523 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:15 ---
+Parametry: okno=12, ukryte=32, lr=0.005, tr=1600
+Wynik MAE: 2.6272 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:16 ---
+Parametry: okno=12, ukryte=64, lr=0.001, tr=800
+Wynik MAE: 1.6773 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:17 ---
+Parametry: okno=12, ukryte=64, lr=0.001, tr=1200
+Wynik MAE: 1.6107 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:17 ---
+Parametry: okno=12, ukryte=64, lr=0.001, tr=1600
+Wynik MAE: 2.3262 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:18 ---
+Parametry: okno=12, ukryte=64, lr=0.005, tr=800
+Wynik MAE: 0.5465 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:19 ---
+Parametry: okno=12, ukryte=64, lr=0.005, tr=1200
+Wynik MAE: 0.5932 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:20 ---
+Parametry: okno=12, ukryte=64, lr=0.005, tr=1600
+Wynik MAE: 0.8966 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:21 ---
+Parametry: okno=24, ukryte=32, lr=0.001, tr=800
+Wynik MAE: 3.4373 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:22 ---
+Parametry: okno=24, ukryte=32, lr=0.001, tr=1200
+Wynik MAE: 3.5711 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:23 ---
+Parametry: okno=24, ukryte=32, lr=0.001, tr=1600
+Wynik MAE: 3.5226 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:25 ---
+Parametry: okno=24, ukryte=32, lr=0.005, tr=800
+Wynik MAE: 2.2090 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:26 ---
+Parametry: okno=24, ukryte=32, lr=0.005, tr=1200
+Wynik MAE: 1.9784 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:27 ---
+Parametry: okno=24, ukryte=32, lr=0.005, tr=1600
+Wynik MAE: 2.3449 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:29 ---
+Parametry: okno=24, ukryte=64, lr=0.001, tr=800
+Wynik MAE: 1.5324 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:30 ---
+Parametry: okno=24, ukryte=64, lr=0.001, tr=1200
+Wynik MAE: 1.9091 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:31 ---
+Parametry: okno=24, ukryte=64, lr=0.001, tr=1600
+Wynik MAE: 3.1898 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:33 ---
+Parametry: okno=24, ukryte=64, lr=0.005, tr=800
+Wynik MAE: 0.6336 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:34 ---
+Parametry: okno=24, ukryte=64, lr=0.005, tr=1200
+Wynik MAE: 0.5874 °C
+------------------------------
+--- Sesja: 2026-03-27 10:50:35 ---
+Parametry: okno=24, ukryte=64, lr=0.005, tr=1600
+Wynik MAE: 0.5222 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:39 ---
+Parametry: okno=6, ukryte=32, lr=0.001, tr=800
+Wynik MAE: 3.4683 °C
+Wynik MAE: 15.1315 °C
+Wynik MAE: 3.8899 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:39 ---
+Parametry: okno=6, ukryte=32, lr=0.001, tr=1200
+Wynik MAE: 3.4951 °C
+Wynik MAE: 15.2881 °C
+Wynik MAE: 3.9100 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:39 ---
+Parametry: okno=6, ukryte=32, lr=0.001, tr=1600
+Wynik MAE: 3.6373 °C
+Wynik MAE: 16.3321 °C
+Wynik MAE: 4.0413 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:40 ---
+Parametry: okno=6, ukryte=32, lr=0.005, tr=800
+Wynik MAE: 1.5231 °C
+Wynik MAE: 4.9167 °C
+Wynik MAE: 2.2174 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:40 ---
+Parametry: okno=6, ukryte=32, lr=0.005, tr=1200
+Wynik MAE: 2.2103 °C
+Wynik MAE: 7.6911 °C
+Wynik MAE: 2.7733 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:40 ---
+Parametry: okno=6, ukryte=32, lr=0.005, tr=1600
+Wynik MAE: 2.6129 °C
+Wynik MAE: 9.1585 °C
+Wynik MAE: 3.0263 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:41 ---
+Parametry: okno=6, ukryte=64, lr=0.001, tr=800
+Wynik MAE: 2.2918 °C
+Wynik MAE: 7.8578 °C
+Wynik MAE: 2.8032 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:41 ---
+Parametry: okno=6, ukryte=64, lr=0.001, tr=1200
+Wynik MAE: 2.1445 °C
+Wynik MAE: 6.5881 °C
+Wynik MAE: 2.5667 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:42 ---
+Parametry: okno=6, ukryte=64, lr=0.001, tr=1600
+Wynik MAE: 2.9102 °C
+Wynik MAE: 10.8085 °C
+Wynik MAE: 3.2876 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:42 ---
+Parametry: okno=6, ukryte=64, lr=0.005, tr=800
+Wynik MAE: 0.7272 °C
+Wynik MAE: 1.7144 °C
+Wynik MAE: 1.3093 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:43 ---
+Parametry: okno=6, ukryte=64, lr=0.005, tr=1200
+Wynik MAE: 0.8074 °C
+Wynik MAE: 1.9611 °C
+Wynik MAE: 1.4004 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:43 ---
+Parametry: okno=6, ukryte=64, lr=0.005, tr=1600
+Wynik MAE: 0.8567 °C
+Wynik MAE: 2.4181 °C
+Wynik MAE: 1.5550 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:44 ---
+Parametry: okno=12, ukryte=32, lr=0.001, tr=800
+Wynik MAE: 3.1744 °C
+Wynik MAE: 12.7193 °C
+Wynik MAE: 3.5664 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:45 ---
+Parametry: okno=12, ukryte=32, lr=0.001, tr=1200
+Wynik MAE: 3.2330 °C
+Wynik MAE: 13.1137 °C
+Wynik MAE: 3.6213 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:45 ---
+Parametry: okno=12, ukryte=32, lr=0.001, tr=1600
+Wynik MAE: 3.3597 °C
+Wynik MAE: 14.0897 °C
+Wynik MAE: 3.7536 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:46 ---
+Parametry: okno=12, ukryte=32, lr=0.005, tr=800
+Wynik MAE: 2.1702 °C
+Wynik MAE: 7.5452 °C
+Wynik MAE: 2.7469 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:47 ---
+Parametry: okno=12, ukryte=32, lr=0.005, tr=1200
+Wynik MAE: 1.4634 °C
+Wynik MAE: 4.4929 °C
+Wynik MAE: 2.1196 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:47 ---
+Parametry: okno=12, ukryte=32, lr=0.005, tr=1600
+Wynik MAE: 2.2079 °C
+Wynik MAE: 7.9449 °C
+Wynik MAE: 2.8187 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:48 ---
+Parametry: okno=12, ukryte=64, lr=0.001, tr=800
+Wynik MAE: 2.6053 °C
+Wynik MAE: 8.9849 °C
+Wynik MAE: 2.9975 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:49 ---
+Parametry: okno=12, ukryte=64, lr=0.001, tr=1200
+Wynik MAE: 2.1992 °C
+Wynik MAE: 7.2675 °C
+Wynik MAE: 2.6958 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:50 ---
+Parametry: okno=12, ukryte=64, lr=0.001, tr=1600
+Wynik MAE: 2.6111 °C
+Wynik MAE: 8.9937 °C
+Wynik MAE: 2.9990 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:50 ---
+Parametry: okno=12, ukryte=64, lr=0.005, tr=800
+Wynik MAE: 0.6924 °C
+Wynik MAE: 1.8745 °C
+Wynik MAE: 1.3691 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:51 ---
+Parametry: okno=12, ukryte=64, lr=0.005, tr=1200
+Wynik MAE: 0.4989 °C
+Wynik MAE: 0.7955 °C
+Wynik MAE: 0.8919 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:52 ---
+Parametry: okno=12, ukryte=64, lr=0.005, tr=1600
+Wynik MAE: 0.8151 °C
+Wynik MAE: 2.1688 °C
+Wynik MAE: 1.4727 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:53 ---
+Parametry: okno=24, ukryte=32, lr=0.001, tr=800
+Wynik MAE: 3.5082 °C
+Wynik MAE: 15.4658 °C
+Wynik MAE: 3.9327 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:54 ---
+Parametry: okno=24, ukryte=32, lr=0.001, tr=1200
+Wynik MAE: 3.3143 °C
+Wynik MAE: 13.7552 °C
+Wynik MAE: 3.7088 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:55 ---
+Parametry: okno=24, ukryte=32, lr=0.001, tr=1600
+Wynik MAE: 3.3800 °C
+Wynik MAE: 14.2366 °C
+Wynik MAE: 3.7731 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:57 ---
+Parametry: okno=24, ukryte=32, lr=0.005, tr=800
+Wynik MAE: 1.8326 °C
+Wynik MAE: 6.8126 °C
+Wynik MAE: 2.6101 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:58 ---
+Parametry: okno=24, ukryte=32, lr=0.005, tr=1200
+Wynik MAE: 1.8105 °C
+Wynik MAE: 5.4646 °C
+Wynik MAE: 2.3377 °C
+------------------------------
+--- Sesja: 2026-03-27 11:02:59 ---
+Parametry: okno=24, ukryte=32, lr=0.005, tr=1600
+Wynik MAE: 2.7899 °C
+Wynik MAE: 10.3501 °C
+Wynik MAE: 3.2172 °C
+------------------------------
+--- Sesja: 2026-03-27 11:03:01 ---
+Parametry: okno=24, ukryte=64, lr=0.001, tr=800
+Wynik MAE: 1.3431 °C
+Wynik MAE: 3.7564 °C
+Wynik MAE: 1.9381 °C
+------------------------------
+--- Sesja: 2026-03-27 11:03:02 ---
+Parametry: okno=24, ukryte=64, lr=0.001, tr=1200
+Wynik MAE: 1.7227 °C
+Wynik MAE: 5.9445 °C
+Wynik MAE: 2.4381 °C
+------------------------------
+--- Sesja: 2026-03-27 11:03:03 ---
+Parametry: okno=24, ukryte=64, lr=0.001, tr=1600
+Wynik MAE: 1.8006 °C
+Wynik MAE: 5.9371 °C
+Wynik MAE: 2.4366 °C
+------------------------------
+--- Sesja: 2026-03-27 11:03:05 ---
+Parametry: okno=24, ukryte=64, lr=0.005, tr=800
+Wynik MAE: 0.7091 °C
+Wynik MAE: 1.7754 °C
+Wynik MAE: 1.3324 °C
+------------------------------
+--- Sesja: 2026-03-27 11:03:06 ---
+Parametry: okno=24, ukryte=64, lr=0.005, tr=1200
+Wynik MAE: 0.7346 °C
+Wynik MAE: 1.5410 °C
+Wynik MAE: 1.2414 °C
+------------------------------
+--- Sesja: 2026-03-27 11:03:07 ---
+Parametry: okno=24, ukryte=64, lr=0.005, tr=1600
+Wynik MAE: 0.7514 °C
+Wynik MAE: 1.9768 °C
+Wynik MAE: 1.4060 °C
+------------------------------

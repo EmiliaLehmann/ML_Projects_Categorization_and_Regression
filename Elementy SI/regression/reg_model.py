@@ -85,7 +85,7 @@ class TemperaturePredictionNet:
 
 
 #zapis danych z prób
-def save_results_to_files(window, hidden, lr, mae_result):
+def save_results_to_files(window, hidden, lr, mae_result, mse_result, rmse_result, tr):
     # dane do zapisu
     timestamp = pd.Timestamp.now().strftime('%Y-%m-%d %H:%M:%S')
 
@@ -96,7 +96,10 @@ def save_results_to_files(window, hidden, lr, mae_result):
         'Window_Size': window,
         'Hidden_Size': hidden,
         'Learning_Rate': lr,
-        'MAE_Celsius': round(mae_result, 4)
+        'Training_Size': tr,
+        'MAE_Celsius': round(mae_result, 4),
+        'MSE_Celisius': round(mse_result,4),
+        'RMSE_Celisius': round(rmse_result, 4)
     }])
 
     # struktura plikow csv
@@ -105,8 +108,10 @@ def save_results_to_files(window, hidden, lr, mae_result):
     # zapis do txt
     with open("logi_modelu.txt", "a", encoding="utf-8") as f:
         f.write(f"--- Sesja: {timestamp} ---\n")
-        f.write(f"Parametry: okno={window}, ukryte={hidden}, lr={lr}\n")
+        f.write(f"Parametry: okno={window}, ukryte={hidden}, lr={lr}, tr={tr}\n")
         f.write(f"Wynik MAE: {mae_result:.4f} °C\n")
+        f.write(f"Wynik MAE: {mse_result:.4f} °C\n")
+        f.write(f"Wynik MAE: {rmse_result:.4f} °C\n")
         f.write("-" * 30 + "\n")
 
 #to jest inny typ doboru danych (walk forward validation) - nie random wybierane jak w naszym modelu z kategoryzacja tylko duzo na raz po sobie
@@ -116,7 +121,7 @@ def save_results_to_files(window, hidden, lr, mae_result):
 windows_to_test = [6, 12, 24]
 hiddens_to_test = [32, 64]
 lrs_to_test = [0.001, 0.005]
-train_size = 1200
+train_size = [800, 1200, 1600]
 
 results_summary = []
 
@@ -125,44 +130,49 @@ print("Grid Search start")
 for w_size in windows_to_test:
     for h_size in hiddens_to_test:
         for lr_rate in lrs_to_test:
+            for tr_size in train_size:
+                print(f"\n>>> Testowanie: Window={w_size}, Hidden={h_size}, LR={lr_rate}, Train: {tr_size}")
 
-            print(f"\n>>> Testowanie: Window={w_size}, Hidden={h_size}, LR={lr_rate}")
+                # Inicjalizacja modelu z konkretnymi parametrami z tej iteracji
+                model = TemperaturePredictionNet(input_size=1, hidden_size=h_size, output_size=1, lr=lr_rate)
 
-            # Inicjalizacja modelu z konkretnymi parametrami z tej iteracji
-            model = TemperaturePredictionNet(input_size=1, hidden_size=h_size, output_size=1, lr=lr_rate)
+                wf_predictions = []
+                wf_actuals = []
 
-            wf_predictions = []
-            wf_actuals = []
+                for i in range(tr_size, len(scaled_data)):
+                    x_input = scaled_data[i - w_size:i].reshape(w_size, 1)
+                    y_true = scaled_data[i]
 
-            for i in range(train_size, len(scaled_data)):
-                x_input = scaled_data[i - w_size:i].reshape(w_size, 1)
-                y_true = scaled_data[i]
+                    y_pred, _ = model.forward(x_input)
+                    wf_predictions.append(y_pred[0][0])
+                    wf_actuals.append(y_true)
 
-                y_pred, _ = model.forward(x_input)
-                wf_predictions.append(y_pred[0][0])
-                wf_actuals.append(y_true)
+                    model.train(x_input, np.array([y_true]))
 
-                model.train(x_input, np.array([y_true]))
+                #liczenie po ludzku wartosci w celicjluszach
+                def denorm(x):
+                    return ((x + 1) / 2) * (data_max - data_min) + data_min
 
-            #liczenie po ludzku wartosci w celicjluszach
-            def denorm(x):
-                return ((x + 1) / 2) * (data_max - data_min) + data_min
+                p = denorm(np.array(wf_predictions))
+                a = denorm(np.array(wf_actuals))
+                current_mae = np.mean(np.abs(p - a))
+                current_mse = np.square(np.subtract(a,p)).mean()
+                current_rmse = np.sqrt(np.mean((p-a)**2))
 
-            p = denorm(np.array(wf_predictions))
-            a = denorm(np.array(wf_actuals))
-            current_mae = np.mean(np.abs(p - a))
+                print(f"Koniec iteracji.\n MAE: {current_mae:.4f}°C\n MSE: {current_mse:.4f}°C\n RMSE: {current_rmse:.4f}°C\n")
 
-            print(f"Koniec iteracji. MAE: {current_mae:.4f} °C")
+                # Zapisujemy konkretne wartości z TEJ iteracji (w_size, h_size, lr_rate)
+                save_results_to_files(w_size, h_size, lr_rate, current_mae, current_mse, current_rmse, tr_size)
 
-            # Zapisujemy konkretne wartości z TEJ iteracji (w_size, h_size, lr_rate)
-            save_results_to_files(w_size, h_size, lr_rate, current_mae)
-
-            results_summary.append({
-                'window': w_size,
-                'hidden': h_size,
-                'lr': lr_rate,
-                'mae': current_mae
-            })
+                results_summary.append({
+                    'window': w_size,
+                    'hidden': h_size,
+                    'lr': lr_rate,
+                    'mae': current_mae,
+                    'mse': current_mse,
+                    'rmse': current_rmse,
+                    'tr': tr_size
+                })
 
 print("\n" + "="*30)
 print("GRID SEARCH ZAKOŃCZONY!")
@@ -171,7 +181,7 @@ print("GRID SEARCH ZAKOŃCZONY!")
 df_results = pd.DataFrame(results_summary)
 best_result = df_results.loc[df_results['mae'].idxmin()]
 
-print("\n--- NAJLEPSZE PARAMETRY ---")
+print("\n--- NAJLEPSZE HIPERPARAMETRY ---")
 print(best_result)
 
 
