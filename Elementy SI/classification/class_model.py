@@ -12,7 +12,7 @@ from collections import Counter
 # Download latest version
 #path = kagglehub.dataset_download("maharshipandya/-spotify-tracks-dataset")
 
-df = pd.read_csv("dataset.csv")
+df = pd.read_csv("dataset_cat.csv")
 
 #czyszczenie danych i przygotowanie pod model
 print(df.info())

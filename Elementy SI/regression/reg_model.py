@@ -84,74 +84,98 @@ class TemperaturePredictionNet:
         return 0.5 * (y_pred - y_true) ** 2  # znowu ta strata z excela kwadraty bledu
 
 
+#zapis danych z prób
+def save_results_to_files(window, hidden, lr, mae_result):
+    # dane do zapisu
+    timestamp = pd.Timestamp.now().strftime('%Y-%m-%d %H:%M:%S')
+
+    # zapis csv
+    csv_file = 'eksperymenty_rnn.csv'
+    df_entry = pd.DataFrame([{
+        'Data': timestamp,
+        'Window_Size': window,
+        'Hidden_Size': hidden,
+        'Learning_Rate': lr,
+        'MAE_Celsius': round(mae_result, 4)
+    }])
+
+    # struktura plikow csv
+    df_entry.to_csv(csv_file, mode='a', index=False, header=not pd.io.common.file_exists(csv_file))
+
+    # zapis do txt
+    with open("logi_modelu.txt", "a", encoding="utf-8") as f:
+        f.write(f"--- Sesja: {timestamp} ---\n")
+        f.write(f"Parametry: okno={window}, ukryte={hidden}, lr={lr}\n")
+        f.write(f"Wynik MAE: {mae_result:.4f} °C\n")
+        f.write("-" * 30 + "\n")
+
 #to jest inny typ doboru danych (walk forward validation) - nie random wybierane jak w naszym modelu z kategoryzacja tylko duzo na raz po sobie
 #no bo ma przewidywac w czasie po sobie a nie random ahh dane z 2021 a potem 1939
 
 #no tu w sumie parametry do modelu dobieramy
-window_size = 12
-hidden_size = 64
-initial_lr = 0.001
+windows_to_test = [6, 12, 24]
+hiddens_to_test = [32, 64]
+lrs_to_test = [0.001, 0.005]
 train_size = 1200
 
-model = TemperaturePredictionNet(input_size=1, hidden_size=hidden_size, output_size=1, lr=initial_lr)
+results_summary = []
 
-#to jest przygotowanie tabel do wyswietlenia wynikow na plocie
-wf_predictions = []
-wf_actuals = []
+print("Grid Search start")
 
-print("Starting Walk-Forward Validation :D")
+for w_size in windows_to_test:
+    for h_size in hiddens_to_test:
+        for lr_rate in lrs_to_test:
 
-# no start tego procesu jak print powyzej mowi
-for i in range(train_size, len(scaled_data)):
-    # wybieramy obecne okno - te 12 miesiecy jakies
-    x_input = scaled_data[i - window_size:i].reshape(window_size, 1)
-    y_true = scaled_data[i]
+            print(f"\n>>> Testowanie: Window={w_size}, Hidden={h_size}, LR={lr_rate}")
 
-    #proba przewidzenia temp w nastepnym miesiacu po podanych 12stu z okna bez uczenia
-    y_pred, _ = model.forward(x_input)
-    wf_predictions.append(y_pred[0][0])
-    wf_actuals.append(y_true)
+            # Inicjalizacja modelu z konkretnymi parametrami z tej iteracji
+            model = TemperaturePredictionNet(input_size=1, hidden_size=h_size, output_size=1, lr=lr_rate)
 
-    # teraz bierze dane z tych 12 miesiecy i na nich bazuje
-    model.train(x_input, np.array([y_true]))
+            wf_predictions = []
+            wf_actuals = []
 
-    # postep co kazde 120 miesiecy, my mamy wziete ich mega duzo btw bo train size to 1200
-    if (i - train_size) % 120 == 0:
-        error = np.abs(y_pred[0][0] - y_true)
-        print(f"Month {i}: Current absolute error: {error:.4f}")
+            for i in range(train_size, len(scaled_data)):
+                x_input = scaled_data[i - w_size:i].reshape(w_size, 1)
+                y_true = scaled_data[i]
 
-print("Validation Complete.")
+                y_pred, _ = model.forward(x_input)
+                wf_predictions.append(y_pred[0][0])
+                wf_actuals.append(y_true)
+
+                model.train(x_input, np.array([y_true]))
+
+            #liczenie po ludzku wartosci w celicjluszach
+            def denorm(x):
+                return ((x + 1) / 2) * (data_max - data_min) + data_min
+
+            p = denorm(np.array(wf_predictions))
+            a = denorm(np.array(wf_actuals))
+            current_mae = np.mean(np.abs(p - a))
+
+            print(f"Koniec iteracji. MAE: {current_mae:.4f} °C")
+
+            # Zapisujemy konkretne wartości z TEJ iteracji (w_size, h_size, lr_rate)
+            save_results_to_files(w_size, h_size, lr_rate, current_mae)
+
+            results_summary.append({
+                'window': w_size,
+                'hidden': h_size,
+                'lr': lr_rate,
+                'mae': current_mae
+            })
+
+print("\n" + "="*30)
+print("GRID SEARCH ZAKOŃCZONY!")
+
+# Wyświetlenie rankingu
+df_results = pd.DataFrame(results_summary)
+best_result = df_results.loc[df_results['mae'].idxmin()]
+
+print("\n--- NAJLEPSZE PARAMETRY ---")
+print(best_result)
 
 
-def get_final_metrics(preds, actuals, d_min, d_max):
-    #przerobienie z -1 do 1 na stopnie celicjusza czyli odwracamy poczatkowe skalowanie zeby moc odczytac po ludzku 15 stopni nie jakies 0.4516789120
-    def denorm(x):
-        return ((x + 1) / 2) * (d_max - d_min) + d_min
 
-    p = denorm(np.array(preds))
-    a = denorm(np.array(actuals))
 
-    mae = np.mean(np.abs(p - a))
-    print(f"\n--- Final Performance ---")
-    #no i tu nam mowi o tym bledzie absolutnym czyli o ile sie jebnal w przewidzeniu z prawdziwa temperatura - usrednione
-    print(f"Mean Absolute Error: {mae:.4f} °C")
-    return p, a
 
-#przygotowanie danych do wsadzenia do wykresu ktory ladnie pokazuje o ile nasz model sie myli
-p_final, a_final = get_final_metrics(wf_predictions, wf_actuals, data_min, data_max)
 
-import matplotlib.pyplot as plt
-
-# wykres dla bledu na ostatnie 24 miesiace pzdr plt pd i np saving our asses here
-plt.figure(figsize=(12, 6))
-plt.plot(a_final[-24:], label='Actual Temp', marker='o', color='blue')
-plt.plot(p_final[-24:], label='RNN Prediction', marker='x', linestyle='--', color='red')
-plt.title('Kaggle Climate Data: Last 2 Years of Walk-Forward Predictions')
-plt.ylabel('Degrees Celsius (°C)')
-plt.xlabel('Months')
-plt.legend()
-plt.grid(True, alpha=0.3)
-plt.show()
-
-#bardzo lubie qsmp polska husaria btw wlasnie dyskutuja ile kosztuja bilety na malte
-#o czym oni gadaja o linkedin HELP czy nexe i ewron tez studiowali informatyke XDDD
