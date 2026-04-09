@@ -1114,7 +1114,7 @@ Batch size: 64
 Hidden size: 512
 Wynik dla: relu
 Skutecznosc (Accuracy): 45.59%
-
+Zmniejszenie kategorii do 10
 ----------------------------------------
 
 ========================================
@@ -1125,4 +1125,25 @@ Batch size: 64
 Hidden size: 512
 Wynik dla: relu
 Skutecznosc (Accuracy): 35.97%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 100
+Learning Rate: 0.05
+Batch size: 64
+Hidden size: 512
+Wynik dla: relu
+Skutecznosc (Accuracy): 41.35%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 100
+Learning Rate: 0.05
+Batch size: 64
+Hidden size: 512
+Wynik dla: relu
+Skutecznosc (Accuracy): 43.25%
+dodanie dropout
 ----------------------------------------

@@ -1,9 +1,11 @@
 import numpy as np
 
 class DeepSpotifyNet:
-    def __init__(self, input_size, hidden_size1, hidden_size2, output_size, lr, activation):
+    def __init__(self, input_size, hidden_size1, hidden_size2, output_size, lr, activation,  dropout_rate=0.2):
         self.lr = lr
         self.activation_type = activation
+        self.dropout_rate = dropout_rate
+
         factor = 2.0 if activation in ['relu', 'leaky_relu'] else 1.0
 
         # Inicjalizacja wag
@@ -55,15 +57,22 @@ class DeepSpotifyNet:
         exp_x = np.exp(x - np.max(x, axis=1, keepdims=True))
         return exp_x / np.sum(exp_x, axis=1, keepdims=True)
 
-    def forward(self, X):
+    def forward(self, X, training=True):
 
         self.z1 = np.dot(X, self.W1) + self.b1
         self.a1 = self._activate(self.z1)
+
+        if training:
+            self.dropout_mask1 = (np.random.rand(*self.a1.shape) > self.dropout_rate) / (1 - self.dropout_rate)
+            self.a1 *= self.dropout_mask1
 
         self.z2 = np.dot(self.a1, self.W2) + self.b2
         self.a2 = self._activate(self.z2)
         # self.z3 = np.dot(self.a2, self.W3) + self.b3
         # self.a3 = self._relu(self.z3)
+        if training:
+            self.dropout_mask2 = (np.random.rand(*self.a2.shape) > self.dropout_rate) / (1 - self.dropout_rate)
+            self.a2 *= self.dropout_mask2
 
         self.z4 = np.dot(self.a2, self.W4) + self.b4
         self.probs = self._softmax(self.z4)
@@ -82,11 +91,13 @@ class DeepSpotifyNet:
         dz2 = np.dot(dz4, self.W4.T) * self._derivative(self.a2, self.z2)
         dW2 = np.dot(self.a1.T, dz2) / batch_size
         db2 = np.sum(dz2, axis=0, keepdims=True) / batch_size
+        dz2 *= self.dropout_mask2
 
         dz1 = np.dot(dz2, self.W2.T) * self._derivative(self.a1, self.z1)
         dW1 = np.dot(X_batch.T, dz1) / batch_size
         db1 = np.sum(dz1, axis=0, keepdims=True) / batch_size
 
+        dz1 *= self.dropout_mask1
         # Update wag
         self.W1 -= self.lr * dW1
         self.b1 -= self.lr * db1

@@ -100,7 +100,7 @@ print("\nRozpoczynam trenowanie sieci...")
 nn = train_model(nn, X_train, y_train_oh, epochs=epochs, batch_size=batch_size)
 
 # Ewaluacja
-test_probs = nn.forward(X_test)
+test_probs = nn.forward(X_test, training=False)
 predictions = np.argmax(test_probs, axis=1)
 accuracy = np.mean(predictions == y_test)
 

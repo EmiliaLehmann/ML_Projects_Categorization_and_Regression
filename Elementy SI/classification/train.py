@@ -12,12 +12,12 @@ def train_model(model, X_train, y_train_oh, epochs=50, batch_size=128):
             X_batch = X_shuffled[i:i + batch_size]
             y_batch = y_shuffled[i:i + batch_size]
 
-            probs = model.forward(X_batch)
+            probs = model.forward(X_batch, training=True)
             current_batch_size = X_batch.shape[0]
             model.backward(X_batch, y_batch, probs, current_batch_size)
 
         # Obliczanie straty na koniec epoki
-        full_probs = model.forward(X_train)
+        full_probs = model.forward(X_train, training=False)
         loss = -np.mean(np.sum(y_train_oh * np.log(full_probs + 1e-10), axis=1))
         model.loss_history.append(loss)
 
