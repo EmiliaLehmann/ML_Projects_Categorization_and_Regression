@@ -62,3 +62,1067 @@ Learning Rate: 0.05
 Skutecznosc (Accuracy): 29.61%
 Zmiany: dwukrotne zwiększenie neuronów w pierwszej warstwie
 ----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 100
+Learning Rate: 0.01
+Skutecznosc (Accuracy): 29.32%
+Zmiany: Dodanie czwartej warstwy.
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 200
+Learning Rate: 0.05
+Skutecznosc (Accuracy): 29.32%
+Zmiany:
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 200
+Learning Rate: 0.05
+Skutecznosc (Accuracy): 29.84%
+Zmiany: 3 warstwy ukryte
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 200
+Learning Rate: 0.05
+Skutecznosc (Accuracy): 30.57%
+Zmiany: 2 warstwa ukryta
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 200
+Learning Rate: 0.05
+Skutecznosc (Accuracy): 31.14%
+Zmiany: 1 warstw ukrytych
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 200
+Learning Rate: 0.05
+Skutecznosc (Accuracy): 28.58%
+Zmiany: 4 warstwy ukryte
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 200
+Learning Rate: 0.05
+Skutecznosc (Accuracy): 30.77%
+Zmiany:  1 warstw ukrytych
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 200
+Learning Rate: 0.01
+Skutecznosc (Accuracy): 27.45%
+Zmiany: learning rate zmniejszony
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 200
+Learning Rate: 0.1
+Skutecznosc (Accuracy): 31.81%
+Zmiany: learning rate większy
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 200
+Learning Rate: 0.5
+Skutecznosc (Accuracy): 30.89%
+Zmiany: jeszcze wiekszy leraning rate
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 200
+Learning Rate: 0.1
+Skutecznosc (Accuracy): 31.76%
+Zmiany: batch size 256
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 200
+Learning Rate: 0.1
+Skutecznosc (Accuracy): 30.95%
+Zmiany: batch size 128
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 200
+Learning Rate: 0.1
+Skutecznosc (Accuracy): 31.44%
+Zmiany: batch size 512
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 200
+Learning Rate: 0.1
+Skutecznosc (Accuracy): 29.66%
+Zmiany: batch size 1024
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 200
+Learning Rate: 0.1
+Skutecznosc (Accuracy): 31.56%
+Zmiany: liczba neuronow 512 (batch size 512)
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 200
+Learning Rate: 0.1
+Skutecznosc (Accuracy): 31.01%
+Zmiany:liczba neuronów 256
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 200
+Learning Rate: 0.1
+Skutecznosc (Accuracy): 31.04%
+Zmiany: 1024 neuronów
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 200
+Learning Rate: 0.1
+Skutecznosc (Accuracy): 30.62%
+Zmiany: 128 neuronów
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 200
+Learning Rate: 0.1
+Skutecznosc (Accuracy): 28.22%
+Zmiany: dwie warstwy, batch 64
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 200
+Learning Rate: 0.1
+Skutecznosc (Accuracy): 29.98%
+Zmiany:dwie wasrty, batch 256
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 300
+Learning Rate: 0.1
+Skutecznosc (Accuracy): 28.92%
+Zmiany:
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.1
+Skutecznosc (Accuracy): 31.28%
+Wynik dla relu: 31.28%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.1
+Skutecznosc (Accuracy): 31.38%
+Wynik dla relu: 31.38%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.1
+Skutecznosc (Accuracy): 28.76%
+Wynik dla sigmoid: 28.76%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.1
+Skutecznosc (Accuracy): 31.86%
+Wynik dla tanh: 31.86%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.59%
+Wynik dla relu: 31.59%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 32.03%
+Wynik dla sigmoid: 32.03%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 32.17%
+Wynik dla tanh: 32.17%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.85%
+Wynik dla leaky_relu: 31.85%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.75%
+Wynik dla relu: 31.75%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 32.67%
+Wynik dla sigmoid: 32.67%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 32.12%
+Wynik dla tanh: 32.12%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.75%
+Wynik dla leaky_relu: 31.75%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.61%
+Wynik dla relu: 30.61%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 32.10%
+Wynik dla sigmoid: 32.10%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.09%
+Wynik dla tanh: 30.09%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.88%
+Wynik dla leaky_relu: 30.88%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.09%
+Wynik dla relu: 30.09%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.66%
+Wynik dla sigmoid: 31.66%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 27.97%
+Wynik dla tanh: 27.97%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.04%
+Wynik dla leaky_relu: 30.04%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 32.34%
+Wynik dla relu: 32.34%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.32%
+Wynik dla sigmoid: 30.32%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.94%
+Wynik dla tanh: 31.94%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.58%
+Wynik dla leaky_relu: 31.58%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.89%
+Wynik dla relu: 31.89%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.38%
+Wynik dla sigmoid: 31.38%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.86%
+Wynik dla tanh: 31.86%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.70%
+Wynik dla leaky_relu: 31.70%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.43%
+Wynik dla relu: 31.43%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.18%
+Wynik dla sigmoid: 31.18%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.77%
+Wynik dla tanh: 30.77%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.44%
+Wynik dla leaky_relu: 31.44%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.82%
+Wynik dla relu: 30.82%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.16%
+Wynik dla sigmoid: 31.16%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 29.80%
+Wynik dla tanh: 29.80%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.02%
+Wynik dla leaky_relu: 31.02%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.80%
+Wynik dla relu: 30.80%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 28.14%
+Wynik dla sigmoid: 28.14%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.85%
+Wynik dla tanh: 31.85%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.09%
+Wynik dla leaky_relu: 31.09%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.71%
+Wynik dla relu: 31.71%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 28.71%
+Wynik dla sigmoid: 28.71%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 32.28%
+Wynik dla tanh: 32.28%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.93%
+Wynik dla leaky_relu: 31.93%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.18%
+Wynik dla relu: 31.18%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 28.68%
+Wynik dla sigmoid: 28.68%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.82%
+Wynik dla tanh: 31.82%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.22%
+Wynik dla leaky_relu: 31.22%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.06%
+Wynik dla relu: 31.06%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 28.93%
+Wynik dla sigmoid: 28.93%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.18%
+Wynik dla tanh: 31.18%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.59%
+Wynik dla leaky_relu: 30.59%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.16%
+Wynik dla relu: 30.16%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 25.25%
+Wynik dla sigmoid: 25.25%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.60%
+Wynik dla tanh: 30.60%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 29.61%
+Wynik dla leaky_relu: 29.61%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.40%
+Wynik dla relu: 30.40%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 25.41%
+Wynik dla sigmoid: 25.41%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.00%
+Wynik dla tanh: 31.00%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.43%
+Wynik dla leaky_relu: 30.43%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.34%
+Wynik dla relu: 30.34%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 25.62%
+Wynik dla sigmoid: 25.62%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.45%
+Wynik dla tanh: 31.45%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.31%
+Wynik dla leaky_relu: 30.31%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.32%
+Wynik dla relu: 30.32%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 26.74%
+Wynik dla sigmoid: 26.74%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.76%
+Wynik dla tanh: 30.76%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.31%
+Wynik dla leaky_relu: 30.31%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 29.30%
+Wynik dla relu: 29.30%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 32.25%
+Wynik dla sigmoid: 32.25%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.70%
+Wynik dla tanh: 30.70%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 29.57%
+Wynik dla leaky_relu: 29.57%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.18%
+Wynik dla relu: 30.18%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 32.20%
+Wynik dla sigmoid: 32.20%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 29.35%
+Wynik dla tanh: 29.35%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.02%
+Wynik dla leaky_relu: 30.02%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 29.24%
+Wynik dla relu: 29.24%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.96%
+Wynik dla sigmoid: 30.96%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 28.36%
+Wynik dla tanh: 28.36%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 29.18%
+Wynik dla leaky_relu: 29.18%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 27.71%
+Wynik dla relu: 27.71%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.91%
+Wynik dla sigmoid: 30.91%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 28.34%
+Wynik dla tanh: 28.34%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 28.15%
+Wynik dla leaky_relu: 28.15%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.07%
+Wynik dla relu: 31.07%
+Zmiany:
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 32.63%
+Wynik dla sigmoid: 32.63%
+Zmiany:
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.76%
+Wynik dla tanh: 31.76%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.46%
+Zmiany: leaky_rel
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.32%
+Wynik dla relu: 31.32%
+Zmiany:
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 32.43%
+Wynik dla sigmoid: 32.43%
+Zmiany:
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.58%
+Wynik dla tanh: 30.58%
+Zmiany:
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 31.29%
+Wynik dla leaky_relu: 31.29%
+Zmiany:
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: [0.1, 0.5, 0.01, 0.05]
+Skutecznosc (Accuracy): 30.39%
+Wynik dla relu: 30.39%
+Zmiany:
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.1
+Wynik dla: sigmoid
+Skutecznosc (Accuracy): 38.14%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.1
+Wynik dla: sigmoid
+Skutecznosc (Accuracy): 42.51%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 300
+Learning Rate: 0.1
+Wynik dla: sigmoid
+Skutecznosc (Accuracy): 42.11%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 300
+Learning Rate: 0.1
+Batch size: 64
+Hidden size: 256
+Wynik dla: sigmoid
+Skutecznosc (Accuracy): 42.82%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 300
+Learning Rate: 0.1
+Batch size: 64
+Hidden size: 256
+Wynik dla: leaky_relu
+Skutecznosc (Accuracy): 42.20%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 300
+Learning Rate: 0.01
+Batch size: 64
+Hidden size: 256
+Wynik dla: relu
+Skutecznosc (Accuracy): 41.11%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 300
+Learning Rate: 0.01
+Batch size: 64
+Hidden size: 512
+Wynik dla: relu
+Skutecznosc (Accuracy): 42.21%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 300
+Learning Rate: 0.01
+Batch size: 64
+Hidden size: 512
+Wynik dla: relu
+Skutecznosc (Accuracy): 33.53%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 300
+Learning Rate: 0.1
+Batch size: 64
+Hidden size: 512
+Wynik dla: relu
+Skutecznosc (Accuracy): 41.04%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.1
+Batch size: 64
+Hidden size: 512
+Wynik dla: relu
+Skutecznosc (Accuracy): 35.92%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 300
+Learning Rate: 0.1
+Batch size: 64
+Hidden size: 512
+Wynik dla: relu
+Skutecznosc (Accuracy): 34.74%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 300
+Learning Rate: 0.1
+Batch size: 64
+Hidden size: 512
+Wynik dla: relu
+Skutecznosc (Accuracy): 38.83%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 300
+Learning Rate: 0.05
+Batch size: 64
+Hidden size: 512
+Wynik dla: relu
+Skutecznosc (Accuracy): 35.31%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 300
+Learning Rate: 0.05
+Batch size: 64
+Hidden size: 512
+Wynik dla: relu
+Skutecznosc (Accuracy): 45.59%
+
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 300
+Learning Rate: 0.05
+Batch size: 64
+Hidden size: 512
+Wynik dla: relu
+Skutecznosc (Accuracy): 35.97%
+----------------------------------------
