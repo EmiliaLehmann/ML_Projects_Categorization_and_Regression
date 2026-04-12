@@ -4,7 +4,45 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 
-from classification.data_clening import simplify_genre_detailed
+
+def simplify_genre_detailed(genre):
+    genre = str(genre).lower()
+
+    if 'classical' in genre or 'opera' in genre: return 'Classical'
+    if 'jazz' in genre: return 'Jazz'
+    if 'blues' in genre or 'bluegrass' in genre: return 'Blues'
+
+    if any(word in genre for word in ['metal', 'grindcore', 'hardcore']): return 'Metal'
+    if any(word in genre for word in ['punk', 'grunge']): return 'Punk/Grunge'
+    if 'rock' in genre or 'alternative' in genre or 'emo' in genre: return 'Rock'
+
+    if any(word in genre for word in
+           ['techno', 'trance', 'dubstep', 'hardstyle', 'drum-and-bass']): return 'Hard-Electronic'
+    if any(word in genre for word in ['house', 'edm', 'electro', 'idm', 'breakbeat']): return 'Dance-Electronic'
+    if 'ambient' in genre or 'new-age' in genre or 'sleep' in genre: return 'Ambient/Sleep'
+
+    if 'indie' in genre: return 'Indie'
+    if 'pop' in genre: return 'Pop'
+
+    if 'hip-hop' in genre or 'rap' in genre: return 'Hip-Hop'
+    if any(word in genre for word in ['r-n-b', 'soul', 'funk', 'groove']): return 'RnB/Soul'
+    if 'reggae' in genre or 'ska' in genre or 'dub' in genre: return 'Reggae/Ska'
+    if 'reggaeton' in genre: return 'Reggaeton'
+
+    if any(word in genre for word in ['latin', 'latino', 'salsa', 'samba', 'tango', 'spanish']): return 'Latin'
+    if any(word in genre for word in ['brazil', 'mpb', 'pagode', 'forro', 'sertanejo']): return 'Brazil-Regional'
+    if any(word in genre for word in
+           ['afrobeat', 'world-music', 'indian', 'iranian', 'malay', 'turkish']): return 'World'
+
+    if 'country' in genre or 'honky-tonk' in genre: return 'Country'
+    if 'folk' in genre or 'songwriter' in genre: return 'Folk'
+    if 'acoustic' in genre or 'piano' in genre or 'guitar' in genre: return 'Acoustic/Instrumental'
+
+    if 'kids' in genre or 'children' in genre or 'disney' in genre or 'anime' in genre: return 'Kids'
+    if any(word in genre for word in ['party', 'club', 'disco', 'happy']): return 'Party/Disco'
+    if any(word in genre for word in ['chill', 'study', 'sad', 'romance']): return 'Chill/Mood'
+
+    return 'Other'
 #biore sobie uproszczenie tych nazw z funkcji wcześniejszej <3
 
 def load_classification_data(
@@ -119,5 +157,15 @@ def inverse_scale_temperature(values, data_min, data_max):
     return values * (data_max - data_min) + data_min
 #do odwrócenia skalowania wartości
 
+
+# if __name__ == "__main__":
+#     data = load_classification_data()
+#
+#     print("X_train shape:", data["X_train"].shape)
+#     print("X_test shape:", data["X_test"].shape)
+#     print("y_train shape:", data["y_train"].shape)
+#     print("y_test shape:", data["y_test"].shape)
+#
+#     print("\nPrzykładowe klasy:", data["class_names"][:5])
 
 
