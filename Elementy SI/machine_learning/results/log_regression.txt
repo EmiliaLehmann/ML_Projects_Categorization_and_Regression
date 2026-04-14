@@ -1,0 +1,528 @@
+
+========================================
+--- NOWY TEST MODELU ---
+Model: KNNRegressor
+Parametr: n_neighbors
+Wartość: 3
+MAE: 0.4939
+MSE: 0.3877
+RMSE: 0.6227
+R2: 0.9775
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: KNNRegressor
+Parametr: n_neighbors
+Wartość: 5
+MAE: 0.4841
+MSE: 0.3711
+RMSE: 0.6092
+R2: 0.9784
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: KNNRegressor
+Parametr: n_neighbors
+Wartość: 7
+MAE: 0.4845
+MSE: 0.3719
+RMSE: 0.6098
+R2: 0.9784
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: KNNRegressor
+Parametr: n_neighbors
+Wartość: 9
+MAE: 0.4811
+MSE: 0.3707
+RMSE: 0.6088
+R2: 0.9785
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: KNNRegressor
+Parametr: metric
+Wartość: euclidean
+MAE: 0.4841
+MSE: 0.3711
+RMSE: 0.6092
+R2: 0.9784
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: KNNRegressor
+Parametr: metric
+Wartość: manhattan
+MAE: 0.4967
+MSE: 0.3899
+RMSE: 0.6244
+R2: 0.9774
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: KNNRegressor
+Parametr: metric
+Wartość: chebyshev
+MAE: 0.4822
+MSE: 0.3697
+RMSE: 0.6080
+R2: 0.9785
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: KNNRegressor
+Parametr: metric
+Wartość: minkowski
+MAE: 0.4841
+MSE: 0.3711
+RMSE: 0.6092
+R2: 0.9784
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: KNNRegressor
+Parametr: p
+Wartość: 1
+MAE: 0.4967
+MSE: 0.3899
+RMSE: 0.6244
+R2: 0.9774
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: KNNRegressor
+Parametr: p
+Wartość: 2
+MAE: 0.4841
+MSE: 0.3711
+RMSE: 0.6092
+R2: 0.9784
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: KNNRegressor
+Parametr: p
+Wartość: 3
+MAE: 0.4833
+MSE: 0.3718
+RMSE: 0.6097
+R2: 0.9784
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: KNNRegressor
+Parametr: p
+Wartość: 4
+MAE: 0.4797
+MSE: 0.3656
+RMSE: 0.6046
+R2: 0.9788
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: DecisionTreeRegressor
+Parametr: max_depth
+Wartość: 3
+MAE: 1.0241
+MSE: 1.8116
+RMSE: 1.3460
+R2: 0.8948
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: DecisionTreeRegressor
+Parametr: max_depth
+Wartość: 5
+MAE: 0.7290
+MSE: 0.9495
+RMSE: 0.9744
+R2: 0.9449
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: DecisionTreeRegressor
+Parametr: max_depth
+Wartość: 10
+MAE: 0.6552
+MSE: 1.0218
+RMSE: 1.0108
+R2: 0.9407
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: DecisionTreeRegressor
+Parametr: max_depth
+Wartość: 15
+MAE: 0.6587
+MSE: 1.1961
+RMSE: 1.0937
+R2: 0.9305
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: DecisionTreeRegressor
+Parametr: min_samples_split
+Wartość: 2
+MAE: 0.6552
+MSE: 1.0218
+RMSE: 1.0108
+R2: 0.9407
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: DecisionTreeRegressor
+Parametr: min_samples_split
+Wartość: 5
+MAE: 0.6001
+MSE: 0.7636
+RMSE: 0.8738
+R2: 0.9557
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: DecisionTreeRegressor
+Parametr: min_samples_split
+Wartość: 10
+MAE: 0.6062
+MSE: 0.7616
+RMSE: 0.8727
+R2: 0.9558
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: DecisionTreeRegressor
+Parametr: min_samples_split
+Wartość: 20
+MAE: 0.6649
+MSE: 0.9019
+RMSE: 0.9497
+R2: 0.9476
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: DecisionTreeRegressor
+Parametr: min_samples_leaf
+Wartość: 1
+MAE: 0.6552
+MSE: 1.0218
+RMSE: 1.0108
+R2: 0.9407
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: DecisionTreeRegressor
+Parametr: min_samples_leaf
+Wartość: 2
+MAE: 0.6418
+MSE: 0.8607
+RMSE: 0.9278
+R2: 0.9500
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: DecisionTreeRegressor
+Parametr: min_samples_leaf
+Wartość: 4
+MAE: 0.6165
+MSE: 0.8794
+RMSE: 0.9378
+R2: 0.9489
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: DecisionTreeRegressor
+Parametr: min_samples_leaf
+Wartość: 8
+MAE: 0.4959
+MSE: 0.4668
+RMSE: 0.6832
+R2: 0.9729
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: RandomForestRegressor
+Parametr: n_estimators
+Wartość: 50
+MAE: 0.4611
+MSE: 0.4014
+RMSE: 0.6336
+R2: 0.9767
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: RandomForestRegressor
+Parametr: n_estimators
+Wartość: 100
+MAE: 0.4756
+MSE: 0.4254
+RMSE: 0.6522
+R2: 0.9753
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: RandomForestRegressor
+Parametr: n_estimators
+Wartość: 200
+MAE: 0.4679
+MSE: 0.4062
+RMSE: 0.6374
+R2: 0.9764
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: RandomForestRegressor
+Parametr: n_estimators
+Wartość: 300
+MAE: 0.4711
+MSE: 0.4109
+RMSE: 0.6410
+R2: 0.9761
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: RandomForestRegressor
+Parametr: max_depth
+Wartość: 5
+MAE: 0.6220
+MSE: 0.6084
+RMSE: 0.7800
+R2: 0.9647
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: RandomForestRegressor
+Parametr: max_depth
+Wartość: 10
+MAE: 0.5211
+MSE: 0.4802
+RMSE: 0.6929
+R2: 0.9721
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: RandomForestRegressor
+Parametr: max_depth
+Wartość: 15
+MAE: 0.4869
+MSE: 0.4351
+RMSE: 0.6596
+R2: 0.9747
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: RandomForestRegressor
+Parametr: max_depth
+Wartość: None
+MAE: 0.4756
+MSE: 0.4254
+RMSE: 0.6522
+R2: 0.9753
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: RandomForestRegressor
+Parametr: min_samples_leaf
+Wartość: 1
+MAE: 0.4756
+MSE: 0.4254
+RMSE: 0.6522
+R2: 0.9753
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: RandomForestRegressor
+Parametr: min_samples_leaf
+Wartość: 2
+MAE: 0.4811
+MSE: 0.4192
+RMSE: 0.6474
+R2: 0.9757
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: RandomForestRegressor
+Parametr: min_samples_leaf
+Wartość: 4
+MAE: 0.4477
+MSE: 0.3726
+RMSE: 0.6104
+R2: 0.9784
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: RandomForestRegressor
+Parametr: min_samples_leaf
+Wartość: 8
+MAE: 0.4098
+MSE: 0.3066
+RMSE: 0.5538
+R2: 0.9822
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: SVR
+Parametr: C
+Wartość: 0.1
+MAE: 0.6849
+MSE: 0.6994
+RMSE: 0.8363
+R2: 0.9594
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: SVR
+Parametr: C
+Wartość: 1
+MAE: 0.5853
+MSE: 0.5554
+RMSE: 0.7452
+R2: 0.9677
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: SVR
+Parametr: C
+Wartość: 10
+MAE: 0.5766
+MSE: 0.5207
+RMSE: 0.7216
+R2: 0.9698
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: SVR
+Parametr: C
+Wartość: 100
+MAE: 0.5786
+MSE: 0.5244
+RMSE: 0.7242
+R2: 0.9695
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: SVR
+Parametr: kernel
+Wartość: linear
+MAE: 0.4235
+MSE: 0.2695
+RMSE: 0.5192
+R2: 0.9843
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: SVR
+Parametr: kernel
+Wartość: poly
+MAE: 1.0308
+MSE: 1.4968
+RMSE: 1.2234
+R2: 0.9131
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: SVR
+Parametr: kernel
+Wartość: rbf
+MAE: 0.5853
+MSE: 0.5554
+RMSE: 0.7452
+R2: 0.9677
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: SVR
+Parametr: kernel
+Wartość: sigmoid
+MAE: 3.2873
+MSE: 13.6205
+RMSE: 3.6906
+R2: 0.2091
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: SVR
+Parametr: gamma
+Wartość: scale
+MAE: 0.5853
+MSE: 0.5554
+RMSE: 0.7452
+R2: 0.9677
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: SVR
+Parametr: gamma
+Wartość: auto
+MAE: 0.5341
+MSE: 0.4098
+RMSE: 0.6402
+R2: 0.9762
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: SVR
+Parametr: gamma
+Wartość: 0.01
+MAE: 0.9417
+MSE: 1.1377
+RMSE: 1.0666
+R2: 0.9339
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Model: SVR
+Parametr: gamma
+Wartość: 0.1
+MAE: 0.5075
+MSE: 0.3751
+RMSE: 0.6125
+R2: 0.9782
+----------------------------------------
