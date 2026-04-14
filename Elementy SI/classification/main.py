@@ -9,15 +9,15 @@ X_train, X_test, y_train_oh, y_test_oh, y_test, num_classes, le = prepare_data("
 
 # Konfiguracja modelu
 input_dim = X_train.shape[1]
-epochs = 100
+epochs = 150
 
 
-learning_rate = 0.05
-    #[0.1, 0.5, 0.01, 0.05]
-hidden_size1=512
-  #  [128,256,512,1024]
+learning_rate = 0.001
+    #lr [0.0005, 0.05, 0.001, 0.005]
+hidden_size1=256
+  #hidden sizes [64 i 128 ,128 i 256,256 i 512,512 i 1024] [128,256,512,1024]
 batch_size=64
-    #[64,128,256,512]
+    # [128,256,512,1024]
 activations_to_test ='relu'
   #  ['relu', 'sigmoid', 'tanh', 'leaky_relu']
 
@@ -88,8 +88,8 @@ print(f"\n>>> Test: LR={learning_rate}, Batch={batch_size}, Hidden={hidden_size1
 
 nn = DeepSpotifyNet(
     input_size=input_dim,
-    hidden_size1=hidden_size1,
-    hidden_size2=256,
+    hidden_size1=1024,
+    hidden_size2=512,
     output_size=num_classes,
     lr=learning_rate,
     activation=activations_to_test

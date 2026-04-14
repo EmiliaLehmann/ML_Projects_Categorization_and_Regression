@@ -84,15 +84,17 @@ def prepare_data(file_path):
     corr_num = pd.Series(f_values_norm, index=num_features)
 
     categorical_cols = []
+    df = pd.get_dummies(df, columns=['key', 'mode', 'time_signature'])
 
-    selected_features = ['popularity', 'duration_ms', 'danceability', 'energy',
-                         'loudness', 'speechiness', 'acousticness', 'instrumentalness',
-                         'liveness', 'valence', 'tempo', 'explicit', 'key', 'mode','time_signature' ]
-
-
-
-    X = df[selected_features]
+     # selected_features = ['popularity', 'duration_ms', 'danceability', 'energy',
+     #                     'loudness', 'speechiness', 'acousticness', 'instrumentalness',
+     #                     'liveness', 'valence', 'tempo', 'explicit', 'key', 'mode','time_signature' ]
+    X = df.select_dtypes(include=[np.number])
     y = y_encoded
+
+
+    # X = df[selected_features]
+    # y = y_encoded
 
     # Podział danych
     X_train, X_test, y_train, y_test = train_test_split(

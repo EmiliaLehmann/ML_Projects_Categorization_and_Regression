@@ -8,9 +8,19 @@ class DeepSpotifyNet:
 
         factor = 2.0 if activation in ['relu', 'leaky_relu'] else 1.0
 
+        self.beta1 = 0.9
+        self.beta2 = 0.999
+        self.eps = 1e-8
+        self.t = 0
+
+
+
+
         # Inicjalizacja wag
         self.W1 = np.random.randn(input_size, hidden_size1) * np.sqrt(factor / input_size)
         self.b1 = np.zeros((1, hidden_size1))
+
+        self.l2_lambda = 0.0001
 
         self.W2 = np.random.randn(hidden_size1, hidden_size2) * np.sqrt(factor / hidden_size1)
         self.b2 = np.zeros((1, hidden_size2))
@@ -19,6 +29,25 @@ class DeepSpotifyNet:
 
         self.W4 = np.random.randn(hidden_size2, output_size) * np.sqrt(factor / hidden_size2)
         self.b4 = np.zeros((1, output_size))
+
+        # momenty
+        self.mW1 = np.zeros_like(self.W1)
+        self.vW1 = np.zeros_like(self.W1)
+
+        self.mW2 = np.zeros_like(self.W2)
+        self.vW2 = np.zeros_like(self.W2)
+
+        self.mW4 = np.zeros_like(self.W4)
+        self.vW4 = np.zeros_like(self.W4)
+
+        self.mb1 = np.zeros_like(self.b1)
+        self.vb1 = np.zeros_like(self.b1)
+
+        self.mb2 = np.zeros_like(self.b2)
+        self.vb2 = np.zeros_like(self.b2)
+
+        self.mb4 = np.zeros_like(self.b4)
+        self.vb4 = np.zeros_like(self.b4)
 
         self.loss_history = []
 
@@ -50,8 +79,15 @@ class DeepSpotifyNet:
         m = y_true.shape[0]
 
         y_pred = np.clip(y_pred, 1e-15, 1.0 - 1e-15)
-        loss = -np.sum(y_true * np.log(y_pred)) / m
-        return loss
+
+        cross_entropy = -np.sum(y_true * np.log(y_pred)) / m
+
+        l2 = self.l2_lambda * (
+                np.sum(self.W1 ** 2) +
+                np.sum(self.W2 ** 2) +
+                np.sum(self.W4 ** 2)
+        )
+        return cross_entropy + l2
 
     def _softmax(self, x):
         exp_x = np.exp(x - np.max(x, axis=1, keepdims=True))
@@ -82,6 +118,7 @@ class DeepSpotifyNet:
 
         dz4 = probs - y_batch
         dW4 = np.dot(self.a2.T, dz4) / batch_size
+        dW4 += self.l2_lambda * self.W4
         db4 = np.sum(dz4, axis=0, keepdims=True) / batch_size
 
         # dz3 = np.dot(dz4, self.W4.T) * (self.z3 > 0)
@@ -89,25 +126,54 @@ class DeepSpotifyNet:
         # db3 = np.sum(dz3, axis=0, keepdims=True) / batch_size
 
         dz2 = np.dot(dz4, self.W4.T) * self._derivative(self.a2, self.z2)
+        if hasattr(self, 'dropout_mask2'):
+            dz2 *= self.dropout_mask2
+
         dW2 = np.dot(self.a1.T, dz2) / batch_size
+        dW2 += self.l2_lambda * self.W2
         db2 = np.sum(dz2, axis=0, keepdims=True) / batch_size
-        dz2 *= self.dropout_mask2
+
 
         dz1 = np.dot(dz2, self.W2.T) * self._derivative(self.a1, self.z1)
+        dz1 *= self.dropout_mask1
+
         dW1 = np.dot(X_batch.T, dz1) / batch_size
+        dW1 += self.l2_lambda * self.W1
         db1 = np.sum(dz1, axis=0, keepdims=True) / batch_size
 
-        dz1 *= self.dropout_mask1
-        # Update wag
-        self.W1 -= self.lr * dW1
-        self.b1 -= self.lr * db1
 
-        self.W2 -= self.lr * dW2
-        self.b2 -= self.lr * db2
-        # self.W3 -= self.lr * dW3
-        # self.b3 -= self.lr * db3
+        self.t += 1
 
-        self.W4 -= self.lr * dW4
-        self.b4 -= self.lr * db4
+        def adam_update(param, dparam, m, v):
+            m[:] = self.beta1 * m + (1 - self.beta1) * dparam
+            v[:] = self.beta2 * v + (1 - self.beta2) * (dparam ** 2)
+
+            m_hat = m / (1 - self.beta1 ** self.t)
+            v_hat = v / (1 - self.beta2 ** self.t)
+
+            param -= self.lr * m_hat / (np.sqrt(v_hat) + self.eps)
+
+        # Wagi
+        adam_update(self.W1, dW1, self.mW1, self.vW1)
+        adam_update(self.W2, dW2, self.mW2, self.vW2)
+        adam_update(self.W4, dW4, self.mW4, self.vW4)
+
+        # Biasy
+        adam_update(self.b1, db1, self.mb1, self.vb1)
+        adam_update(self.b2, db2, self.mb2, self.vb2)
+        adam_update(self.b4, db4, self.mb4, self.vb4)
+
+
+        # # Update wag
+        # self.W1 -= self.lr * dW1
+        # self.b1 -= self.lr * db1
+        #
+        # self.W2 -= self.lr * dW2
+        # self.b2 -= self.lr * db2
+        # # self.W3 -= self.lr * dW3
+        # # self.b3 -= self.lr * db3
+        #
+        # self.W4 -= self.lr * dW4
+        # self.b4 -= self.lr * db4
 
 
