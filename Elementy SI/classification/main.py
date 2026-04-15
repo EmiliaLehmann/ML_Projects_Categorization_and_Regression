@@ -14,10 +14,10 @@ epochs = 150
 
 learning_rate = 0.001
     #lr [0.0005, 0.05, 0.001, 0.005]
-hidden_size1=256
+hidden_size1=1024
   #hidden sizes [64 i 128 ,128 i 256,256 i 512,512 i 1024] [128,256,512,1024]
-batch_size=64
-    # [128,256,512,1024]
+batch_size=[64, 512]
+    # [64,128,256,512]
 activations_to_test ='relu'
   #  ['relu', 'sigmoid', 'tanh', 'leaky_relu']
 
@@ -83,36 +83,70 @@ results = []
 #     f.write(f" - Learning Rate:      {best_result['lr']}")
 #     f.write(f" - Batch Size:         {best_result['batch']}")
 #     f.write("="*50)
+for bat in batch_size:
+    print(f"\n>>> Test: LR={learning_rate}, Batch={bat}, Hidden={hidden_size1}, Act={activations_to_test}")
 
-print(f"\n>>> Test: LR={learning_rate}, Batch={batch_size}, Hidden={hidden_size1}, Act={activations_to_test}")
+    nn = DeepSpotifyNet(
+        input_size=input_dim,
+        hidden_size1=1024,
+        hidden_size2=512,
+        output_size=num_classes,
+        lr=learning_rate,
+        activation=activations_to_test
+    )
 
-nn = DeepSpotifyNet(
-    input_size=input_dim,
-    hidden_size1=1024,
-    hidden_size2=512,
-    output_size=num_classes,
-    lr=learning_rate,
-    activation=activations_to_test
-)
+    #  Trenowanie
+    print("\nRozpoczynam trenowanie sieci...")
+    nn = train_model(nn, X_train, y_train_oh, epochs=epochs, batch_size=bat)
 
-#  Trenowanie
-print("\nRozpoczynam trenowanie sieci...")
-nn = train_model(nn, X_train, y_train_oh, epochs=epochs, batch_size=batch_size)
+    # Ewaluacja
+    test_probs = nn.forward(X_test, training=False)
+    predictions = np.argmax(test_probs, axis=1)
+    accuracy = np.mean(predictions == y_test)
 
-# Ewaluacja
-test_probs = nn.forward(X_test, training=False)
-predictions = np.argmax(test_probs, axis=1)
-accuracy = np.mean(predictions == y_test)
+    # Zapisywanie wyniku
+    with open("wynik_modelu.txt", "a") as f:
+        f.write("\n" + "=" * 40 + "\n")
+        f.write("--- NOWY TEST MODELU ---\n")
+        f.write(f"Liczba epok: {epochs}\n")
+        f.write(f"Learning Rate: {learning_rate}\n")
+        f.write(f"Batch size: {bat}\n")
+        f.write(f"Hidden size: {hidden_size1}\n")
+        f.write(f"Wynik dla: {activations_to_test}\n")
+        f.write(f"Skutecznosc (Accuracy): {accuracy * 100:.2f}%\n")
+        f.write("----------------------------------------\n")
 
-# Zapisywanie wyniku
-with open("wynik_modelu.txt", "a") as f:
-    f.write("\n" + "=" * 40 + "\n")
-    f.write("--- NOWY TEST MODELU ---\n")
-    f.write(f"Liczba epok: {epochs}\n")
-    f.write(f"Learning Rate: {learning_rate}\n")
-    f.write(f"Batch size: {batch_size}\n")
-    f.write(f"Hidden size: {hidden_size1}\n")
-    f.write(f"Wynik dla: {activations_to_test}\n")
-    f.write(f"Skutecznosc (Accuracy): {accuracy * 100:.2f}%\n")
-    f.write("----------------------------------------\n")
+activations_to_test = ['relu', 'sigmoid', 'tanh', 'leaky_relu']
+batch_size = 128
+for act in activations_to_test:
+    print(f"\n>>> Test: LR={learning_rate}, Batch={batch_size}, Hidden={hidden_size1}, Act={act}")
 
+    nn = DeepSpotifyNet(
+        input_size=input_dim,
+        hidden_size1=1024,
+        hidden_size2=512,
+        output_size=num_classes,
+        lr=learning_rate,
+        activation=act
+    )
+
+    #  Trenowanie
+    print("\nRozpoczynam trenowanie sieci...")
+    nn = train_model(nn, X_train, y_train_oh, epochs=epochs, batch_size=batch_size)
+
+    # Ewaluacja
+    test_probs = nn.forward(X_test, training=False)
+    predictions = np.argmax(test_probs, axis=1)
+    accuracy = np.mean(predictions == y_test)
+
+    # Zapisywanie wyniku
+    with open("wynik_modelu.txt", "a") as f:
+        f.write("\n" + "=" * 40 + "\n")
+        f.write("--- NOWY TEST MODELU ---\n")
+        f.write(f"Liczba epok: {epochs}\n")
+        f.write(f"Learning Rate: {learning_rate}\n")
+        f.write(f"Batch size: {batch_size}\n")
+        f.write(f"Hidden size: {hidden_size1}\n")
+        f.write(f"Wynik dla: {act}\n")
+        f.write(f"Skutecznosc (Accuracy): {accuracy * 100:.2f}%\n")
+        f.write("----------------------------------------\n")
