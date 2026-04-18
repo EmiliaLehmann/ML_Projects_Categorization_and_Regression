@@ -1,6 +1,5 @@
 import numpy as np
 
-#Chat we are so cooked
 class TemperaturePredictionNet:
     def __init__(self, input_size, hidden_size, output_size, lr=0.01, num_layers=1, activation='tanh'):
         self.hidden_size = hidden_size
@@ -21,7 +20,7 @@ class TemperaturePredictionNet:
             self.params.append(layer)
             current_input_dim = hidden_size  # Wyjście warstwy i jest wejściem dla i+1
 
-        # Warstwa wyjściowa (Dense)
+        # Warstwa wyjściowa
         self.Why = np.random.randn(output_size, hidden_size) * 0.1
         self.by = np.zeros((output_size, 1))
 
@@ -64,7 +63,7 @@ class TemperaturePredictionNet:
                     self.params[l]['bh']
                 h_states[l][t] = self._activate(z)
                 next_input.append(h_states[l][t])
-            current_input = next_input  # Przekaż do następnej warstwy
+            current_input = next_input  # Przekaż do następnej warstwu
 
         y_pred = np.dot(self.Why, h_states[-1][len(x_sequence) - 1]) + self.by
         return y_pred, h_states
