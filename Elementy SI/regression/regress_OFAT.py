@@ -33,6 +33,7 @@ analysis_config = {
     "hidden_size": [16, 32, 64, 128],
     "learning_rate": [0.001, 0.005, 0.01, 0.05],
     "training_size": [400, 800, 1200, 1600],
+    "epochs": [25, 50, 75, 100]
 }
 
 base_params = {
@@ -42,10 +43,10 @@ base_params = {
     'tr_size': 1200,
     'layers': 1,
     'act': 'tanh',
-    'epochs': 30
+    'epochs': 50
 }
 
-n_repeats = 3  # Wymóg: powtórzenie procesu kilkakrotnie
+n_repeats = 10  # epowtórzenie procesu kilkakrotnie
 
 print("Boze daj mi sile zaczynamy walke tak nierowna jak atomic baby vs hydrogen bomb")
 
@@ -68,6 +69,8 @@ for param_name, values in analysis_config.items():
             current_run['lr'] = val
         elif param_name == "training_size":
             current_run['tr_size'] = val
+        elif param_name == "epochs":
+            current_run['epochs'] = val
 
         repeat_train_mae = []
         repeat_test_mae = []
