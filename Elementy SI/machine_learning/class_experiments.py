@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 
-from preprocessing import load_classification_data
+from preprocessing2 import load_classification_data
 
 
 def evaluate_classification_model(model, X_train, X_test, y_train, y_test):
@@ -30,7 +30,7 @@ def evaluate_classification_model(model, X_train, X_test, y_train, y_test):
     return results
 
 
-def save_results(results_list, output_path="results/classification_results2.csv"):
+def save_results(results_list, output_path="results/classification_results3.csv"):
     os.makedirs("results", exist_ok=True)
     df = pd.DataFrame(results_list)
     df.to_csv(output_path, index=False)
@@ -58,7 +58,7 @@ def run_classification_experiments():
     print("Start eksperymentów klasyfikacyjnych")
 
 #KNN
-    knn_neighbors = [3, 5, 7, 9]
+    knn_neighbors = [3, 11, 31, 51]
     for n in knn_neighbors:
         print(f"KNN | n_neighbors={n}")
         model = KNeighborsClassifier(
@@ -105,7 +105,7 @@ def run_classification_experiments():
         metrics = evaluate_classification_model(model, X_train, X_test, y_train, y_test)
         add_result(results, "DecisionTree", "max_depth", depth, metrics)
 
-    tree_min_samples_split = [2, 5, 10, 20]
+    tree_min_samples_split = [2, 20, 50, 100]
     for min_split in tree_min_samples_split:
         print(f"Decision Tree | min_samples_split={min_split}")
         model = DecisionTreeClassifier(
