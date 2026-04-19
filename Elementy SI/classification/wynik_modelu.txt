@@ -1340,3 +1340,470 @@ Hidden size: 1024
 Wynik dla: leaky_relu
 Skutecznosc (Accuracy): 92.51%
 ----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 64
+Hidden size: 1024
+Wynik dla: leaky_relu
+Skutecznosc (Accuracy): 91.78%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Wynik dla: relu
+Skutecznosc (Accuracy): 73.85%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: relu
+Skutecznosc (Accuracy): 93.95%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.0005
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: relu
+Skutecznosc (Accuracy): 93.45%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.05
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: relu
+Skutecznosc (Accuracy): 14.57%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: relu
+Skutecznosc (Accuracy): 93.84%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.005
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: relu
+Skutecznosc (Accuracy): 85.09%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 64
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: relu
+Skutecznosc (Accuracy): 92.54%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: relu
+Skutecznosc (Accuracy): 93.42%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 256
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: relu
+Skutecznosc (Accuracy): 93.39%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 512
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: relu
+Skutecznosc (Accuracy): 93.05%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.0005
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: relu
+Skutecznosc (Accuracy): 93.48%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.05
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: relu
+Skutecznosc (Accuracy): 14.57%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: relu
+Skutecznosc (Accuracy): 93.58%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.005
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: relu
+Skutecznosc (Accuracy): 86.13%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 64
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: relu
+Skutecznosc (Accuracy): 93.09%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: relu
+Skutecznosc (Accuracy): 92.97%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 256
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: relu
+Skutecznosc (Accuracy): 93.91%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 512
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: relu
+Skutecznosc (Accuracy): 93.27%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: relu
+Skutecznosc (Accuracy): 93.56%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: sigmoid
+Skutecznosc (Accuracy): 47.37%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: tanh
+Skutecznosc (Accuracy): 15.22%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: leaky_relu
+Skutecznosc (Accuracy): 93.59%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: relu
+Skutecznosc (Accuracy): 94.00%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: sigmoid
+Skutecznosc (Accuracy): 58.12%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: tanh
+Skutecznosc (Accuracy): 15.09%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: leaky_relu
+Skutecznosc (Accuracy): 93.51%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: relu
+Skutecznosc (Accuracy): 94.24%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: relu
+Skutecznosc (Accuracy): 93.69%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+Wynik dla: relu
+Skutecznosc (Accuracy): 92.85%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+droput rate: 0.1
+Wynik dla: relu
+Skutecznosc (Accuracy): 94.19%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+droput rate: 0.2
+Wynik dla: relu
+Skutecznosc (Accuracy): 94.18%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+droput rate: 0.3
+Wynik dla: relu
+Skutecznosc (Accuracy): 92.99%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+droput rate: 0.4
+Wynik dla: relu
+Skutecznosc (Accuracy): 91.78%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+droput rate: 0.1
+Wynik dla: relu
+Skutecznosc (Accuracy): 94.08%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 150
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Hidden size: 512
+Hidden size: 256
+droput rate: 0.2
+Wynik dla: relu
+Skutecznosc (Accuracy): 94.07%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 50
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Hidden size2: 512
+droput rate: 0.1
+Wynik dla: relu
+Skutecznosc (Accuracy): 89.85%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 50
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Hidden size2: 512
+Wynik dla: relu
+Skutecznosc (Accuracy): 89.10%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 50
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Wynik dla: relu
+Skutecznosc (Accuracy): 72.94%
+----------------------------------------
