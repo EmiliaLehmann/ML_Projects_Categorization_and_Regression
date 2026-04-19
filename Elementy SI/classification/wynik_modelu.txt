@@ -1807,3 +1807,28 @@ Hidden size: 1024
 Wynik dla: relu
 Skutecznosc (Accuracy): 72.94%
 ----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 50
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Hidden size2: 512
+Hidden size3: 256
+Wynik dla: relu
+Skutecznosc (Accuracy): 90.76%
+----------------------------------------
+
+========================================
+--- NOWY TEST MODELU ---
+Liczba epok: 50
+Learning Rate: 0.001
+Batch size: 128
+Hidden size: 1024
+Hidden size2: 512
+Hidden size3: 256
+Hidden size4: 128
+Wynik dla: relu
+Skutecznosc (Accuracy): 90.49%
+----------------------------------------

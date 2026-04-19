@@ -70,7 +70,6 @@ def prepare_data(file_path):
     # print(genres)
 
 
-
     # Label Encoding dla targetu
     le = LabelEncoder()
     y_encoded = le.fit_transform(df['track_genre'])

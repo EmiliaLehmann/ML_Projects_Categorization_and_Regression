@@ -1,6 +1,5 @@
 import numpy as np
 
-
 class DeepSpotifyNet:
     def __init__(self, input_size, hidden_size1, hidden_size2, hidden_size3, output_size, lr, activation, dropout_rate=0.2):
         self.lr = lr
